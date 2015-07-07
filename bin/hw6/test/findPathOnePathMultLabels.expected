@@ -1,0 +1,23 @@
+# one path, multiple labels between nodes in the path 
+
+created graph g 
+
+added node char1 to g
+added node char2 to g
+added node char3 to g
+added node char4 to g
+
+added edge a from char1 to char2 in g
+added edge b from char1 to char2 in g
+added edge c from char1 to char2 in g
+added edge a from char2 to char3 in g
+added edge b from char2 to char3 in g
+added edge c from char2 to char3 in g
+added edge a from char3 to char4 in g
+added edge b from char3 to char4 in g
+added edge c from char3 to char4 in g
+
+path from char1 to char4:
+char1 to char2 via a
+char2 to char3 via a
+char3 to char4 via a

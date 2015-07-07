@@ -1,0 +1,26 @@
+Hope Crandall 
+
+a.
+
+The only methods that would have to change are the constructor RatNum(int n, int d) and the 
+toString() method. The constructor would only need to set numer and denom according to the 
+values passed in instead of finding the gcd and reducing the fraction. However, the toString()
+method would now be required to use that code to construct the numerator and denominator to 
+be printed (rather than printing numer and denom). 
+
+
+b.
+
+RatNum is an immutable ADT, but this implementation changes the fields of this; there
+are no @modify statement in the spec that state this change is allowed to occur. Instead 
+of returning a new RatNum object with a value according the spec, it returns a modified
+version of this, destroying the original values. 
+
+
+c.
+
+Because RatNum is immutable, no method except the constructors changes the fields of the
+object--i.e. all other methods are either observers that do not modify the rep, or 
+return new instances of a RatNum object. A method could not modify RatNum so that it 
+violates the representation invariant because all fields are set to final. If any method
+attempted to change the rep, the code would not even compile.   

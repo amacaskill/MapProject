@@ -1,0 +1,11 @@
+# builds slightly more complex graph 
+
+loaded graph g
+
+g contains: char1 char2 char3 char4 char5
+
+the children of char1 in g are: char2(0.500) char3(0.500) char4(0.333)
+the children of char2 in g are: char1(0.500) char3(0.250)
+the children of char3 in g are: char1(0.500) char2(0.250) char4(1.000) char5(1.000)
+the children of char4 in g are: char1(0.333) char3(1.000) char5(0.500)
+the children of char5 in g are: char3(1.000) char4(0.500)

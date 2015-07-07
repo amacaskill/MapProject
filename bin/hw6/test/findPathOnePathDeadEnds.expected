@@ -1,0 +1,39 @@
+# tests that a path can be found even with multiple branches going off 
+
+created graph g 
+
+added node c1 to g
+added node c2 to g
+added node c3 to g
+added node c4 to g
+added node c5 to g
+added node c6 to g
+added node c7 to g
+added node c8 to g
+added node c9 to g
+added node c10 to g
+
+added edge c from c1 to c2 in g
+added edge a from c1 to c5 in g
+added edge b from c1 to c6 in g
+added edge d from c1 to c9 in g
+
+added edge b from c2 to c3 in g
+added edge c from c2 to c3 in g
+added edge d from c2 to c3 in g
+added edge a from c2 to c6 in g
+
+added edge c from c3 to c4 in g
+added edge d from c3 to c4 in g
+added edge e from c3 to c7 in g
+added edge a from c3 to c9 in g
+added edge b from c3 to c10 in g
+
+added edge a from c6 to c7 in g
+added edge a from c7 to c8 in g
+added edge a from c9 to c10 in g
+
+path from c1 to c4:
+c1 to c2 via c
+c2 to c3 via b 
+c3 to c4 via c

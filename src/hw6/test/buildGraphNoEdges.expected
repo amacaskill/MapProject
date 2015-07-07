@@ -1,0 +1,7 @@
+loaded graph noEdges
+
+noEdges contains: char1 char2 char3
+
+the children of char1 in noEdges are:
+the children of char2 in noEdges are:
+the children of char3 in noEdges are:

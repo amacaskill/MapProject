@@ -1,0 +1,20 @@
+# one path, multiple labels between nodes in the path 
+
+CreateGraph g 
+
+AddNode g char1
+AddNode g char2
+AddNode g char3
+AddNode g char4
+
+AddEdge g char1 char2 a
+AddEdge g char1 char2 b
+AddEdge g char1 char2 c
+AddEdge g char2 char3 a
+AddEdge g char2 char3 b
+AddEdge g char2 char3 c
+AddEdge g char3 char4 a
+AddEdge g char3 char4 b
+AddEdge g char3 char4 c
+
+FindPath g char1 char4

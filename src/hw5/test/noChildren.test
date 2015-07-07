@@ -1,0 +1,5 @@
+CreateGraph graph1
+
+AddNode graph1 n1
+
+ListChildren graph1 n1 

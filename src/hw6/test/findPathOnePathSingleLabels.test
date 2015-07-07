@@ -1,0 +1,14 @@
+# One path, where the path only includes single labels between two nodes 
+
+CreateGraph g 
+
+AddNode g char1
+AddNode g char2
+AddNode g char3
+AddNode g char4
+
+AddEdge g char1 char2 label1
+AddEdge g char2 char3 label2
+AddEdge g char3 char4 label3 
+
+FindPath g char1 char4

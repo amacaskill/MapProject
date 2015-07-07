@@ -1,0 +1,9 @@
+# builds graph without books
+
+loaded graph g
+
+g contains: char1 char2 char3
+
+the children of char1 in g are:
+the children of char2 in g are:
+the children of char3 in g are:

@@ -1,0 +1,8 @@
+# tests for output when there is no path 
+
+CreateGraph g 
+
+AddNode g n1 
+AddNode g n2 
+
+FindPath g n1 n2

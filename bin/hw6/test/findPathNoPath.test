@@ -1,0 +1,8 @@
+# tests if the correct output is given if there are no paths between the nodes 
+
+CreateGraph g 
+
+AddNode g c1
+AddNode g c2 
+
+FindPath g c1 c2

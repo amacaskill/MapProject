@@ -1,0 +1,37 @@
+# tests that the alphabetically least path is chosen when there are multiple paths of the same length
+
+created graph g 
+
+added node c1 to g
+added node c2 to g
+added node c3 to g
+added node c4 to g
+added node c5 to g
+added node c6 to g
+added node c7 to g
+added node c8 to g
+
+added edge a from c1 to c2 in g
+added edge b from c1 to c5 in g
+added edge c from c1 to c6 in g
+ 
+added edge a from c2 to c3 in g
+added edge b from c2 to c7 in g
+added edge c from c2 to c8 in g
+
+added edge a from c3 to c4 in g
+
+added edge a from c5 to c7 in g
+added edge b from c5 to c3 in g
+
+added edge a from c6 to c8 in g
+added edge b from c6 to c3 in g
+
+added edge a from c7 to c4 in g
+
+added edge a from c8 to c4 in g
+
+path from c1 to c4:
+c1 to c2 via a
+c2 to c3 via a
+c3 to c4 via a

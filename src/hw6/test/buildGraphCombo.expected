@@ -1,0 +1,14 @@
+loaded graph combo
+
+combo contains: char1 char2 char3 char4 char5 char6 char7 char8 char9 charNoEdges
+
+the children of charNoEdges in combo are:
+the children of char1 in combo are: char2(book1) char3(book1) char4(book2) char5(book2) char9(book1)
+the children of char2 in combo are: char1(book1) char3(book1) char4(book3) char6(book3) char9(book1)
+the children of char3 in combo are: char1(book1) char2(book1) char5(book4) char7(book4) char8(book4) char9(book1) char9(book4)
+the children of char4 in combo are: char1(book2) char2(book3) char5(book2) char6(book3)
+the children of char5 in combo are: char1(book2) char3(book4) char4(book2) char7(book4) char8(book4) char9(book4)
+the children of char6 in combo are: char2(book3) char4(book3)
+the children of char7 in combo are: char3(book4) char5(book4) char8(book4) char9(book4)
+the children of char8 in combo are: char3(book4) char5(book4) char7(book4) char9(book4)
+the children of char9 in combo are: char1(book1) char2(book1) char3(book1) char3(book4) char5(book4) char7(book4) char8(book4)

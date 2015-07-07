@@ -1,0 +1,36 @@
+# tests that a path can be found even with multiple branches going off 
+
+CreateGraph g 
+
+AddNode g c1
+AddNode g c2
+AddNode g c3
+AddNode g c4
+AddNode g c5
+AddNode g c6
+AddNode g c7
+AddNode g c8
+AddNode g c9
+AddNode g c10
+
+AddEdge g c1 c2 c
+AddEdge g c1 c5 a 
+AddEdge g c1 c6 b 
+AddEdge g c1 c9 d 
+
+AddEdge g c2 c3 b 
+AddEdge g c2 c3 c 
+AddEdge g c2 c3 d
+AddEdge g c2 c6 a 
+
+AddEdge g c3 c4 c
+AddEdge g c3 c4 d
+AddEdge g c3 c7 e 
+AddEdge g c3 c9 a
+AddEdge g c3 c10 b 
+
+AddEdge g c6 c7 a
+AddEdge g c7 c8 a
+AddEdge g c9 c10 a 
+
+FindPath g c1 c4 

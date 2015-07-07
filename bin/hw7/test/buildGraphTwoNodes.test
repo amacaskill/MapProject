@@ -1,0 +1,8 @@
+# tests that two nodes can be correctly connected 
+
+LoadGraph g buildGraphDifBooks2.tsv
+
+ListNodes g
+
+ListChildren g char1
+ListChildren g char2

@@ -1,0 +1,24 @@
+# tests that the shortest path is chosen when multiple paths are possible 
+
+created graph g 
+
+added node c1 to g
+added node c2 to g
+added node c3 to g
+added node c4 to g
+added node c5 to g
+
+added edge f from c1 to c2 in g
+added edge a from c1 to c4 in g
+
+added edge d from c2 to c3 in g
+added edge b from c2 to c1 in g
+added edge a from c2 to c4 in g
+added edge c from c2 to c5 in g
+
+added edge a from c4 to c5 in g
+added edge a from c5 to c3 in g
+
+path from c1 to c3:
+c1 to c2 via f 
+c2 to c3 via d

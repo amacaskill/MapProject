@@ -1,0 +1,28 @@
+Hope Crandall 
+
+a.
+
+I only called checkRep() at the end of the constructor. Because both RatTerm and RatNum are immutable, 
+there is no way to change the values of the fields in either (they are final). This means that methods
+which internally call each other cannot change the rep and that external clients cannot change the rep
+if they have access to a RatTerm object or even its fields. 
+
+
+b.
+
+The constructor would be made simpler because the arguments would not have to be checked, 
+and could directly be assigned to coeff and expt. The method isZero would be made slightly 
+more complicated because coeff would have to be compared to RatNum.ZERO rather than this
+being compared to RatTerm.ZERO. Finally, toString would be made more complicated because it
+would require a specific case where coeff is zero and expt is not. 
+
+
+c.
+
+The constructor would be made slightly more complex because another if statement would be
+required, with separate assignment code for the NaN case. The method isNaN would be made
+slightly less complicated because this could be directly compared to RatTerm.NaN. 
+
+I prefer neither invariants because it makes the constructor much more straightforward, the 
+complexity of isZero / isNaN are barely more complex, and toString handles all the complexity
+rather than any operation which is likely to be more common. 

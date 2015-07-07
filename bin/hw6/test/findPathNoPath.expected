@@ -1,0 +1,9 @@
+# tests if the correct output is given if there are no paths between the nodes 
+
+created graph g 
+
+added node c1 to g 
+added node c2 to g 
+
+path from c1 to c2:
+no path found

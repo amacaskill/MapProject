@@ -1,0 +1,7 @@
+LoadGraph noEdges buildGraphNoEdges.tsv
+
+ListNodes noEdges 
+
+ListChildren noEdges char1
+ListChildren noEdges char2
+ListChildren noEdges char3

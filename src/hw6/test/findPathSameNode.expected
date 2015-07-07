@@ -1,0 +1,15 @@
+# tests output if both nodes entered are the same node 
+
+created graph noEdges
+added node char1 to noEdges
+
+path from char1 to char1:
+
+created graph g
+added node char1 to g 
+added node char2 to g
+added edge label from char1 to char2 in g
+
+path from char1 to char1:
+
+path from char2 to char2:

@@ -1,0 +1,2 @@
+I changed the Graph constructor to take Sets instead of HashSets to be 
+more general. 

@@ -1,0 +1,29 @@
+# Find a path when there is only one possible path, but multiple edges along the way 
+# to finding that path 
+
+CreateGraph g
+
+AddNode g n1
+AddNode g n2
+AddNode g n3
+AddNode g n4
+AddNode g n5
+AddNode g n6
+AddNode g n7
+AddNode g n8
+AddNode g n9
+
+AddEdge g n1 n2 0.5
+AddEdge g n2 n3 0.1
+AddEdge g n3 n4 1 
+AddEdge g n1 n5 1
+AddEdge g n1 n8 0.1
+AddEdge g n2 n6 1
+AddEdge g n2 n7 0.5
+AddEdge g n3 n9 0.1
+AddEdge g n8 n9 1
+AddEdge g n8 n5 1
+AddEdge g n5 n6 1 
+AddEdge g n6 n7 1 
+
+FindPath g n1 n4

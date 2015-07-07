@@ -1,0 +1,24 @@
+Hope Crandall 
+
+For my implementation tests, I mainly attempted to validate that each method
+works as intended under different possible circumstances for its usage. I also 
+wanted to assure that methods that "mirror" each other in some way have the same
+functionality. For instance, all contains methods should work correctly on the 
+same Graph where the get methods are working. Similarly, the iterators should
+work the same way as similar methods. Therefore, in my testing I used two graphs, 
+one empty and one with nodes and edges with enough variety to ensure that as many
+types of cases could be tested as possible. I specifically designed this graph to 
+have a few examples for each test, where each example was similar enough to show
+correctness in multiple examples and different enough to show breadth of usage. 
+
+For my specification tests, I similarly focused on the scenarios that could be
+present in a graph and tested that my Graph builds these scenarios correctly. 
+For instance, creating a graph with certain nodes should result in a graph 
+that contains those nodes. 
+
+After I implemented my Graph and Edge classes I didn't feel there was much that 
+my testing didn't cover. I believe my checkRep method is a sufficient addition 
+to show that my current tests not only produce the correct output but also don't 
+cause any internal problems. My only possible concern with my implementation testing 
+was that it didn't do any malicious testing to try to modify the Graph from the 
+outside, so I added a few tests of this nature. 

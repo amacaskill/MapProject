@@ -1,0 +1,15 @@
+# tests output if both nodes entered are the same node 
+
+CreateGraph noEdges
+AddNode noEdges char1
+
+FindPath noEdges char1 char1
+
+CreateGraph g
+AddNode g char1
+AddNode g char2
+AddEdge g char1 char2 label
+
+FindPath g char1 char1
+
+FindPath g char2 char2

@@ -1,0 +1,10 @@
+# builds graph with different characters that are all only in one book
+
+LoadGraph g buildGraphDifChars2.tsv
+
+ListNodes g
+
+ListChildren g char1
+ListChildren g char2
+ListChildren g char3
+ListChildren g char4

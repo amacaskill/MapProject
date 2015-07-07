@@ -1,0 +1,18 @@
+# tests find path for multiple paths of the same length that go through different nodes
+
+CreateGraph g 
+
+AddNode g n1 
+AddNode g n2 
+AddNode g n3
+AddNode g n4 
+AddNode g n5 
+
+AddEdge g n1 n2 0.1
+AddEdge g n2 n3 0.01 
+AddEdge g n1 n4 0.2
+AddEdge g n4 n3 0.01
+AddEdge g n1 n5 0.01
+AddEdge g n5 n3 0.2
+
+FindPath g n1 n3

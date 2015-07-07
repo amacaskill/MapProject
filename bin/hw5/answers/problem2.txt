@@ -1,0 +1,163 @@
+Hope Crandall
+
+
+**** SUMMARY ****
+
+My Graph implementation includes relevant variations on methods in the following
+categories: 
+	- contains, i.e. does this Graph include the given element
+	- gets, i.e. retrieve the related elements
+	- insert and delete, allows the Graph to mutate what information it contains 
+	- iterators, allows clients to look through the Graph 
+
+My Edge class allows information about connections, including their directions
+and labels. This allows concise functionality within the Graph implementation 
+and for use by the client. 
+
+
+
+**** GRAPH CLASS ****
+
+Mutable so a Graph can grow and shrink in nodes and Edges. 
+
+Graph() and Graph(Set<String>, Set<Edge>)
+	Gives clients the chance to create an empty Graph, or immediately insert
+	sets of nodes and edges to begin their Graph. 
+
+isEmpty()
+	Basic method to let the client know if there are nodes in their Graph. 
+
+containsEdge(String, String, String)
+	Checks if a specific Edge is currently in the Graph. Important for checking
+	if two nodes are connected by a specific label. 
+	
+containsEdge(String, String)
+	Checks if there is an edge, with any label, with the given parent and child. 
+	Important for checking if two nodes are connected by any label. 
+
+containsNode(String)
+	Checks if the Graph contains this node. Important to see what nodes/edges 
+	may still need to be added. 
+
+getLabelsBetween(String, String)
+	Returns all the label in edges from the first node to the second. Important for 
+	seeing one way connections between nodes. 
+
+getInEdgesOf(String)
+	Returns all incoming edges to a node. Important for finding how a node's
+	parents are connected to it. 
+	
+getOutEdgesOf(String)
+	Returns all outgoing edges to a node. Important for finding how a node's
+	children are connected to it. 
+
+getAllEdgesOf(String)
+	Return all edges connected to a node. Important for seeing all connections 
+	a given node has. 
+	
+getParentsOf(String)
+	Returns all parent nodes. Important for seeing what parents a node has 
+	when how they are connected (labels) is not relevant. 
+
+getChildrenOf(String)
+	Returns all child nodes. Important for seeing what children a node has 
+	when how they are connected (labels) is not relevant. 
+
+getAllNodesOf(String)
+	Returns all nodes the given node is connected to. Important for seeing
+	all connections a node has when how they are connected (labels) is not
+	relevant. 
+
+insertNode(String)
+	Allows new nodes, without any edges, to be added to the Graph. 
+
+insertEdge(String, String, String) 
+	Allows new Edges to be added to the Graph. 
+
+deleteEdge(String, String, String)
+	Removes an unwanted edge from the Graph. 
+
+deleteNode(String)
+	Removes an unwanted node from the Graph. 
+
+getNodeSet() 
+	Allows client to have a set of all the nodes in the Graph that can
+	be used in any way without affecting the Graph. 
+	
+getNodeIterator()
+	Allows client to iterate over just the nodes. 
+
+getIncomingEdgeIterator()
+	Allows clients to iterate over edges as grouped by their child nodes.
+	Important if seeking information about which nodes and labels are 
+	pointing to all child nodes. 
+	
+getOutgoingEdgeIterator() 
+	Allows clients to iterate over edges as grouped by their parent nodes.
+	Important if seeking information about which nodes and labels are 
+	pointing away from all parent nodes.
+ 
+ 
+ 
+**** EDGE CLASS ****
+
+Immutable so edges can be returned to the client without fear of them attempting
+to change the graph by directed altering Edges. 
+
+Edge(String, String, String)
+	Creates an Edge that contains the parent node, child node, and a label. A
+	convenient way to store information about connections, their directions, and
+	their labels in a single object that the client can easily access and compare. 
+
+getParent(), getChild(), and getLabel()
+	Easy access for the client to all information stored in an Edge. 
+
+equals() and hashCode()
+	Overrides these methods to support Edge's notion of equals, where having
+	all fields equivalent makes Edges equals even if they are not the same
+	object/reference. 
+
+
+
+**** NO NODE CLASS CURRENTLY **** 
+
+Because nodes are currently only Strings, there isn't a need to wrap this String 
+inside a new object. If objects with more/different information are required in the
+future, my implementation would allow a Node class to be implemented to wrap the data 
+(like the Edge class) in place of String nodes. In this specification, nodes are 
+only defined by their data, not their connections--which are defined by the Edge 
+class instead. 
+
+
+
+**** OTHER POTENTIAL METHODS NOT INCLUDED **** 
+
+existsPath(String, String) and findAllPaths(String, String)
+	More complicated operations that might be useful if clients are
+	frequently trying to find different paths through the Graph. Not 
+	included for simplicity.
+
+getAllNodes() and getAllEdges()
+	Would return immutable sets of all the nodes or Edges in the Graph, to 
+	be viewed by the client. Not included because the iterators provide 
+	similar functionality, while also allowing remove. 
+
+insertNodes(), insertEdges(), deleteNodes(), and deleteEdges()
+	Would allows insertion and deletion of multiple nodes/edges at once. 
+	The intent of the constructor Graph(Set<String>, Set<Edges>) is that the 
+	bulk of the Graph can be constructed at the beginning, and smaller edits
+	can continue with single insertions/deletions. Implementations would 
+	also likely simply use loops on the single insert/deletion methods, 
+	which the client would be able to implement themselves if they need to 
+	do so. 
+
+containsLabel() and getLabelEdges()
+	Would return information about specific Graph labels. Would be important
+	in situations where labels are something like a street name, e.g. for 
+	asking questions such as "is this street in my Graph?" or "does this 
+	street connect these two locations?". Not included because it may be
+	overly specific for a general Graph. 
+	
+	
+	
+	

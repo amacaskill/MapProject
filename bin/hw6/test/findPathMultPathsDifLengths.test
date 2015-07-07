@@ -1,0 +1,22 @@
+# tests that the shortest path is chosen when multiple paths are possible 
+
+CreateGraph g 
+
+AddNode g c1 
+AddNode g c2 
+AddNode g c3 
+AddNode g c4 
+AddNode g c5
+
+AddEdge g c1 c2 f
+AddEdge g c1 c4 a 
+
+AddEdge g c2 c3 d 
+AddEdge g c2 c1 b
+AddEdge g c2 c4 a 
+AddEdge g c2 c5 c 
+
+AddEdge g c4 c5 a 
+AddEdge g c5 c3 a 
+
+FindPath g c1 c3 

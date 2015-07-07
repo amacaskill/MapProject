@@ -1,0 +1,17 @@
+Hope Crandall
+
+a. Fibonacci failed the testThrowsIllegalArgumentException test because Fibonnaci threw an 
+   IllegalArgument exception when getFibTerm was called with a parameter of 0, instead of 
+   returning a 1. To fix this, I changed the first if condition within getFibterm to n < 0 
+   instead of n <= 0. 
+   
+b. Fibonacci failed the testBaseCase test for the same reason it failed 
+   testThrowsIllegalArgumentException on a parameter of 0. My fix for this test also 
+   fixed the testBaseCase problem. 
+
+c. Fibonacci failed the testInductiveCase test for two reasons. First, when getFibTerm
+   was passed 2 it returned a 1 instead of a 2. I fixed this by changing the if
+   condition on the based case from n <= 2 returning 1 to n < 2 returning 1. Second, 
+   for all inputs greater than 2, getFibTerm was taking the difference between the 
+   previous two number instead of adding them, so I adjusted the code accordingly. 
+   

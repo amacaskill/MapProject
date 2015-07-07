@@ -1,0 +1,6 @@
+LoadGraph sameChars buildGraphDifBooks.tsv
+
+ListNodes sameChars
+
+ListChildren sameChars char1
+ListChildren sameChars char2 

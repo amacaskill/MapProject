@@ -1,0 +1,20 @@
+Hope Crandall
+
+Model
+	My model involves three classes. The first is MapParser, which takes input files 
+	and parses the data into usable structures. The second in MapPaths, which is the major
+	lifter for the model, storing all relevant information for the map. Associated with it is
+	the final class, Connection, which can store information for any given pair of coordinates
+	in the MapPath. 
+
+Controller
+	The controller involves only the main method of the MapMain class. This method asks 
+	for user input and calls other methods to access information in the MapPath for the
+	campus map. 
+	
+View
+	The view involves the MapMain class, including the methods main, printPath, printMenu, and 
+	printBuildings. These methods all get information from MapPath and convert it into 
+	formatted Strings that are printed out to the user. The part of the view that is part of
+	main only involves prompting the user for information, not any accessing of the MapPath
+	or display of request information. 

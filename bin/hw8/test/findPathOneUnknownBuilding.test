@@ -1,0 +1,7 @@
+# finding a path where one building is not in the MapPath
+
+r
+NOTBUILD
+CSE
+
+q

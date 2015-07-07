@@ -1,0 +1,8 @@
+# tests that two nodes can be correctly connected 
+
+loaded graph g 
+
+g contains: char1 char2
+
+the children of char1 in g are: char2(0.333)
+the children of char2 in g are: char1(0.333)

@@ -1,0 +1,34 @@
+# tests that the alphabetically least path is chosen when there are multiple paths of the same length
+
+CreateGraph g 
+
+AddNode g c1
+AddNode g c2
+AddNode g c3
+AddNode g c4
+AddNode g c5
+AddNode g c6
+AddNode g c7
+AddNode g c8
+
+AddEdge g c1 c2 a
+AddEdge g c1 c5 b
+AddEdge g c1 c6 c
+
+AddEdge g c2 c3 a 
+AddEdge g c2 c7 b
+AddEdge g c2 c8 c 
+
+AddEdge g c3 c4 a 
+
+AddEdge g c5 c7 a
+AddEdge g c5 c3 b 
+
+AddEdge g c6 c8 a 
+AddEdge g c6 c3 b 
+
+AddEdge g c7 c4 a
+
+AddEdge g c8 c4 a 
+
+FindPath g c1 c4

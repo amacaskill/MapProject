@@ -1,0 +1,6 @@
+loaded graph sameChars
+
+sameChars contains: char1 char2
+
+the children of char1 in sameChars are: char2(book1) char2(book2) char2(book3) char2(book4) char2(book5)
+the children of char2 in sameChars are: char1(book1) char1(book2) char1(book3) char1(book4) char1(book5)

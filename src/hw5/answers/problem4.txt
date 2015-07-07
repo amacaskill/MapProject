@@ -1,0 +1,26 @@
+Hope Crandall
+
+
+Storing a list of edges uses only one data structure to store information, and that
+data structure can be easily added to without any copying operations. 
+
+An adjacency matrix provides the fastest find operations, where finding parents
+and children and edges all all constant time. 
+
+An adjacency list wastes less space than an adjacency matrix, and is as easily 
+mutable as an edge list but is faster in find operations. 
+
+
+
+My representation consists of two fields of type HashMap<String, HashSet<Edge>>. Each 
+stores all nodes in the graph as keys. The field parents relates each node (key) to 
+a HashSet<Edge> of all outgoing edges from that node. The field children relates each
+node (key) to a HashSet<Edge> of all incoming edges to that node. Both maps contain
+the same information ordered differently to provide better performance. 
+
+My parents map is a typical adjacency list and provides all of its advantages. Having
+the extra children map, while it increases space requirements, makes all operations with
+incoming edges / parents as fast as outgoing edge / children operations. 
+
+
+

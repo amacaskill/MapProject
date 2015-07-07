@@ -1,0 +1,17 @@
+# One path, where the path only includes single labels between two nodes 
+
+created graph g 
+
+added node char1 to g
+added node char2 to g
+added node char3 to g
+added node char4 to g
+
+added edge label1 from char1 to char2 in g
+added edge label2 from char2 to char3 in g
+added edge label3 from char3 to char4 in g
+
+path from char1 to char4:
+char1 to char2 via label1
+char2 to char3 via label2
+char3 to char4 via label3

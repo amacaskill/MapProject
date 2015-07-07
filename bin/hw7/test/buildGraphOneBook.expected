@@ -1,0 +1,10 @@
+# builds graph with different characters that are all only in one book
+
+loaded graph g
+
+g contains: char1 char2 char3 char4
+
+the children of char1 in g are: char2(1.000) char3(1.000) char4(1.000)
+the children of char2 in g are: char1(1.000) char3(1.000) char4(1.000)
+the children of char3 in g are: char1(1.000) char2(1.000) char4(1.000)
+the children of char4 in g are: char1(1.000) char2(1.000) char3(1.000)

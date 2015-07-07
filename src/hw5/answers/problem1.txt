@@ -1,0 +1,52 @@
+Hope Crandall
+
+a. 
+	1.
+	
+	Representation Invariant:
+		entries != null && !entries.contains(null)
+	
+	Abstraction Function: 
+		* front of the queue, n0    = entries.getFirst() 
+		* back of the queue, nk     = entries.getLast() 
+		* nth element in the queue  = entries.get(n) 
+
+	2.
+	
+	Representation Invariant: 
+		entries != null, front != null, size >= 0
+		size <= entries.length
+	
+	Abstraction Function: 
+		if entries[front] == null then there are no elements in the queue 
+		entries[front] = the front of the queue 
+		entries[(front + n) % entries/length] = nth element in the queue 
+b.
+
+	a, d, g 	= [1, 2]
+	b, h 		= [2, 3, 4]
+	c, f 		= [1, 2, 3]
+	e 			= [1, 2, 3, 4]
+
+c.
+	1. No. This method returns an int, which can never expose the representation 
+	   because it is a primitive type and not a referenced object. 
+
+	2. Yes. This method returns an array of Strings, this array may be part of the
+	   representation. Because array are mutable, clients could change the representation
+	   from the outside. 
+	   
+	3. Yes. This method returns an object of type Date. If this type of object
+	   is mutable and it is part of the representation, clients could change
+	   the representation from the outside. 
+	   
+	4. No. This method returns a String, which is immutable. Even if it were a part
+	   of the representation, it could not be changed. 
+
+	5. Yes. If this iterator allows remove functionality and it is iterating over 
+	   a collection that is part of the representation, it would allow clients to 
+	   change the representation.
+	
+	6. Yes. If this list is set directly as part of the representation, the client
+	   still has access to this reference and could change it after the fact. 
+	

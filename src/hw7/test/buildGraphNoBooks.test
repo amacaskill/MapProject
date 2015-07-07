@@ -1,0 +1,9 @@
+# builds graph without books
+
+LoadGraph g buildGraphNoEdges2.tsv
+
+ListNodes g 
+
+ListChildren g char1
+ListChildren g char2
+ListChildren g char3

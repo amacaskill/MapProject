@@ -1,0 +1,2 @@
+I added the getBuildingCoordinates method to MapPaths so that a path between a building
+and itself can be marked on the map as a single point, rather than an empty map. 

@@ -1,0 +1,4 @@
+I added vertical and horizontal scroll bars so that the map can be viewed in a larger format. 
+
+I also added a feature to try to focus the scroll bars generally closer to the correct area of the map
+when the Get Path button is clicked.

@@ -1,0 +1,21 @@
+Hope Crandall
+
+a. 
+	* Because the field "volume" and constructor parameter "volume" have the same name, 
+	  without specifying the field as this.volume the field will not be set. 
+	* The getVolume method always returns 0 instead of the contents of the volume field.
+
+b. 
+    * Maintaining the total volume of the Balls in BallContainer is the better option
+      because it requires very little storage and no calculations are needed for any
+      call on getVolume(). Otherwise, each call would have to perform the same, and
+      possibly very long calculation, each time. 
+
+c.  
+	* One way to implement getBallsFromSmallest is to maintain a sorted list of the 
+	  balls. Another way is to add all the balls to a list and sort that list when 
+	  getBallsFromSmallest is called. 
+	  
+	* The first method requires more calculation for add and remove calls, but each
+	  insert into a sorted list is unlikely to take long in comparison to sorting
+	  the entire unsorted list every time the getBallsFromSmallest method is called. 

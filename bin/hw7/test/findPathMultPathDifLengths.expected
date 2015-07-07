@@ -1,0 +1,21 @@
+# tests that the least weighted path is chosen among paths of different lengths
+
+created graph g 
+
+added node n1 to g
+added node n2 to g
+added node n3 to g
+added node n4 to g
+added node n5 to g
+
+added edge 5.000 from n1 to n3 in g
+added edge 0.100 from n1 to n2 in g 
+added edge 0.100 from n2 to n3 in g 
+added edge 0.010 from n1 to n4 in g 
+added edge 0.500 from n4 to n5 in g 
+added edge 0.100 from n5 to n3 in g 
+
+path from n1 to n3:
+n1 to n2 with weight 0.100
+n2 to n3 with weight 0.100
+total cost: 0.200
